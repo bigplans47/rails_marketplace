@@ -10,6 +10,45 @@
   </head>
 
   <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+
+
+      <!-- nav-menu fills all nav space after nav-brand -->
+      <div class="navbar-menu">
+
+        <!-- nav-start places elements on the left -->
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <h1><%= link_to "HOME", root_path %></h1>
+          </div>
+        </div>
+
+        <!-- nav-end places elements on the right -->
+        <div class="navbar-end">
+          <% if !current_user %>
+            <div class="navbar-item">
+              <%= link_to "LOG IN", new_user_session_path, :method => :get %>
+            </div>
+
+            <div class="navbar-item">
+              <%= link_to "SIGN UP", new_user_registration_path, :method => :get %>
+            </div>
+          <% end %>
+
+          <% if current_user %>
+            <div class="navbar-item">
+              <%= current_user.email %>
+            </div>
+            <br>
+            <div class="navbar-item">
+              <%= link_to "SIGN OUT", destroy_user_session_path, :method => :delete %>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
