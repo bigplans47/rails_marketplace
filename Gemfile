@@ -51,6 +51,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # dotenv allows access to .env files 
+  gem 'dotenv-rails'
 end
 
 # Authentication Gem
@@ -76,3 +78,5 @@ gem "factory_bot_rails", "~> 4.0"
 
 # Simplecov
 gem "simplecov", require: false
+
+gem 'rest-client'
