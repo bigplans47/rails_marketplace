@@ -14,7 +14,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
     id = current_user.id
     Account.create!(user_id: id)
-    binding.pry
   end
 
   # GET /resource/edit
