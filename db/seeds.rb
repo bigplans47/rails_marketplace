@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do |i|
+  Product.create!(:name => Faker::Coffee.blend_name, :price => Faker::Number.decimal(2))
+  # @product_id = Product.last.id
+  # 3.times do |g|
+  #   OrderItem.create!(:quanity => Faker::Number.between(1,15), :product_id => @product_id, :order_id => 1)
+  # end
+end
