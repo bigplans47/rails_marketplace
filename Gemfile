@@ -51,8 +51,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  # dotenv allows access to .env files 
+  # dotenv allows access to .env files
   gem 'dotenv-rails'
+  gem 'shoulda-matchers'
+  gem 'capybara', '~> 2.8'
 end
 
 # Authentication Gem
@@ -66,7 +68,6 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'launchy'
 gem 'pry'
-gem 'shoulda-matchers'
 gem 'faker'
 gem 'owlcarousel2'
 
