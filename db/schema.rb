@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_05_01_213549) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
-    t.boolean "availible"
+    t.boolean "availible", default: false
   end
 
   create_table "order_items", force: :cascade do |t|
