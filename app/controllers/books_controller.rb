@@ -48,7 +48,11 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.destroy
     flash[:notice] = 'Book removed'
-    redirect_to books_path
+    respond_to do |format|
+      format.html { redirect_to books_path }
+      format.js
+    end
+    # redirect_to books_path
   end
 
   private

@@ -2,5 +2,5 @@
   <%= f.check_box :availible %>
   <%= f.submit "Update" %>
   <%= f.label :availible, book.title %>
-
+  <%= link_to "(remove)", book, method: :delete, data: {confirm: "are you sure?"}, remote: true %>
 <% end %>
