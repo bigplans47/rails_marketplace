@@ -2,6 +2,17 @@
 <hr>
 <%= link_to "New Book", new_book_path, id: "new_link", remote: true %>
 <br>
+
+<h2>Book not availible</h2>
+<div class="books" id="is_not_availible">
+  <%= render @is_not_availible %>
+</div>
+<h2>Book is availible</h2>
+<div class="books" id="is_availible">
+  <%= render @is_availible %>
+</div>
+
+<hr>
 <% @books.each do |single| %>
   <ul>
     <li><%= single.title %></li>

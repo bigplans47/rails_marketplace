@@ -1,6 +1,8 @@
 class BooksController < ApplicationController
   def index
     @books = Book.all
+    @is_availible = Book.where(availible: true)
+    @is_not_availible = Book.where(availible: false)
     # @availibleBook = Book.where(availible: )
   end
 
@@ -16,11 +18,15 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = 'Book added'
-      redirect_to books_path
+      respond_to do |format|
+        format.html { redirect_to books_path }
+        format.js
+      end
     else
       flash[:alert] = 'Book not added'
       render :new
     end
+    # binding.pry
   end
 
   def edit

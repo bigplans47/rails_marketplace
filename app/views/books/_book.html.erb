@@ -1,0 +1,6 @@
+<%= form_for book, :remote => true do |f| %>
+  <%= f.check_box :availible %>
+  <%= f.submit "Update" %>
+  <%= f.label :availible, book.title %>
+
+<% end %>
