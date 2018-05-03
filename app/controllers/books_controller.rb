@@ -3,8 +3,8 @@ class BooksController < ApplicationController
     @books = Book.all
     @is_availible = Book.where(availible: true)
     @is_not_availible = Book.where(availible: false)
-    # api_call = Api.new
-    # @response = api_call.API_call()
+    api_call = Api.new
+    @response = api_call.API_call()
   end
 
   def show
