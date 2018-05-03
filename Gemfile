@@ -42,6 +42,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'launchy'
+  gem 'pry'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -53,8 +57,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # dotenv allows access to .env files
   gem 'dotenv-rails'
-  gem 'shoulda-matchers'
-  gem 'capybara', '~> 2.8'
 end
 
 # Authentication Gem
@@ -65,9 +67,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Project Gems
 gem 'jquery-rails'
-gem 'rspec-rails'
-gem 'launchy'
-gem 'pry'
 gem 'faker'
 gem 'owlcarousel2'
 
@@ -81,3 +80,6 @@ gem "factory_bot_rails", "~> 4.0"
 gem "simplecov", require: false
 
 gem 'rest-client'
+
+# gem for testing
+gem 'capybara', '~> 2.8'
